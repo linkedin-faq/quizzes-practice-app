@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import {
   Box, Paper, Grid
 } from '@material-ui/core';
@@ -6,7 +6,7 @@ import Router from 'next/router';
 import { QuizContext } from 'contexts/quiz/reducer';
 import { SET_QUIZ } from 'contexts/quiz/types';
 import { makeStyles } from '@material-ui/core/styles';
-import quizData from 'Data/quiz';
+import {AppContext} from 'contexts/app/reducer'
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1
@@ -27,8 +27,8 @@ const useStyles = makeStyles((theme) => ({
 }));
 const QuizList = () => {
   const classes = useStyles();
+  const [{topics}] = useContext(AppContext)
   const [, quizDispatch] = useContext(QuizContext);
-  const [tools] = useState(quizData);
 
   const onQuizClick = (x, icon) => {
     const json = require(`./topics/${x.file}`);
@@ -43,12 +43,14 @@ const QuizList = () => {
     Router.push('/quiz');
   };
 
+  
+
 
   return (
     <>
       <Box mt={3}>
         <Grid container spacing={3}>
-          {tools.map((x) => {
+          {topics.map((x) => {
             const img = `/assets/img/logo/${x.img}`;
             return (
               <Grid item xs={12} sm={6} md={4} lg={3}  key={x.id}>
@@ -57,7 +59,7 @@ const QuizList = () => {
                     className="topic-logo"
                     src={img}
                     alt={x.quiz_name}
-                    width="100"
+                    width="120"
                     height="100"
                   />
                   <p className={classes.text}>{x.quiz_name}</p>

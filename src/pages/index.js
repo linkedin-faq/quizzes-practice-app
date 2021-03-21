@@ -1,13 +1,19 @@
+import React, { useState, useContext } from 'react';
 import Head from "next/head";
 import Quiz from "components/Quiz";
 import { Container, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import { AppContext } from 'contexts/app/reducer'
+import { SET_TOPICS } from 'contexts/app/types'
+import SearchBar from "components/Searchbar";
+import quizData from 'Data/quiz';
 
 const useStyles = makeStyles((theme) => ({
   title: {
     fontSize: "4rem",
     textAlign: "center",
     marginBottom: theme.spacing(),
+    textAlign: 'center'
   },
 
   footer: {
@@ -21,6 +27,19 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Home() {
   const classes = useStyles();
+  const [, appDispatch] = useContext(AppContext)
+
+  const [searchValue, setSearchValue] = useState('');
+
+  const onSearchbarInputChange = (e) => {
+    const val =e.target.value
+    setSearchValue(val);
+    const newTopics = quizData.filter(x => x.quiz_name.includes(val));
+    appDispatch({
+      type: SET_TOPICS,
+      payload: newTopics
+    })
+   }
   return (
     <Container>
       <Head>
@@ -32,20 +51,12 @@ export default function Home() {
         <Typography variant="h1" className={classes.title}>
           Welcome to <b>Khelo Quiz!</b>
         </Typography>
+        <div style={{textAlign: 'center'}}>
+          <SearchBar onChangeEvent={onSearchbarInputChange} value={searchValue}/>
+        </div>
 
         <Quiz />
       </main>
-
-      <footer className={classes.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <img src="/vercel.svg" alt="Vercel Logo" className="logo" />
-        </a>
-      </footer>
     </Container>
   );
 }

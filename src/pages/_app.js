@@ -2,6 +2,7 @@ import React from "react";
 import { ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 
+import { AppProvider } from 'contexts/app/reducer';
 import { QuizProvider } from "contexts/quiz/reducer";
 
 import { theme } from "theme";
@@ -19,9 +20,12 @@ function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <QuizProvider>
-        <Component {...pageProps} />
-      </QuizProvider>
+      <AppProvider>
+        <QuizProvider>
+          <Component {...pageProps} />
+        </QuizProvider>
+      </AppProvider>
+      
     </ThemeProvider>
   );
 }
