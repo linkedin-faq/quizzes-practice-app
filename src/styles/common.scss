@@ -1,0 +1,153 @@
+@import './prism';
+
+.topic-logo:hover {
+  -moz-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
+  /*animation-name*/
+  -webkit-animation-name: burst2;
+  -moz-animation-name: burst2;
+  -ms-animation-name: burst2;
+  -o-animation-name: burst2;
+  animation-name: burst2;
+  /*animation-duration*/
+  -webkit-animation-duration: 0.4s;
+  -moz-animation-duration: 0.4s;
+  -ms-animation-duration: 0.4s;
+  -o-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  /*transform-origin*/
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 40px 38px !important;
+  -ms-transform-origin: 50% 50%;
+  -o-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+
+/*=============================================
+[ KeyFrame Animations ]
+==============================================*/
+@-webkit-keyframes burst2 {
+  100% {
+    -webkit-transform: scale(1, 1);
+    animation-timing-function: ease-in;
+  }
+  37% {
+    -webkit-transform: scale(1.5, 1.5);
+    animation-timing-function: ease-out;
+  }
+  55% {
+    -webkit-transform: scale(1.37, 1.37);
+    animation-timing-function: ease-in;
+  }
+  73% {
+    -webkit-transform: scale(1, 1);
+    animation-timing-function: ease-out;
+  }
+  82% {
+    -webkit-transform: scale(1.45, 1.45);
+    animation-timing-function: ease-in;
+  }
+  91% {
+    -webkit-transform: scale(1.5, 1.5);
+    animation-timing-function: ease-out;
+  }
+  96% {
+    -webkit-transform: scale(1.4, 1.4);
+    animation-timing-function: ease-in;
+  }
+}
+@-moz-keyframes burst2 {
+  100% {
+    -moz-transform: scale(1, 1);
+    animation-timing-function: ease-in;
+  }
+  37% {
+    -moz-transform: scale(1.5, 1.5);
+    animation-timing-function: ease-out;
+  }
+  55% {
+    -moz-transform: scale(1.37, 1.37);
+    animation-timing-function: ease-in;
+  }
+  73% {
+    -moz-transform: scale(1, 1);
+    animation-timing-function: ease-out;
+  }
+  82% {
+    -moz-transform: scale(1.45, 1.45);
+    animation-timing-function: ease-in;
+  }
+  91% {
+    -moz-transform: scale(1.5, 1.5);
+    animation-timing-function: ease-out;
+  }
+  96% {
+    -moz-transform: scale(1.4, 1.4);
+    animation-timing-function: ease-in;
+  }
+}
+@keyframes burst2 {
+  100% {
+    transform: scale(1, 1);
+    animation-timing-function: ease-in;
+  }
+  37% {
+    transform: scale(1.5, 1.5);
+    animation-timing-function: ease-out;
+  }
+  55% {
+    transform: scale(1.37, 1.37);
+    animation-timing-function: ease-in;
+  }
+  73% {
+    transform: scale(1, 1);
+    animation-timing-function: ease-out;
+  }
+  82% {
+    transform: scale(1.45, 1.45);
+    animation-timing-function: ease-in;
+  }
+  91% {
+    transform: scale(1.5, 1.5);
+    animation-timing-function: ease-out;
+  }
+  96% {
+    transform: scale(1.4, 1.4);
+    animation-timing-function: ease-in;
+  }
+}
+@keyframes shadow-burst {
+  0% {
+    transform: scale(1, 1);
+    animation-timing-function: ease-in;
+  }
+  37% {
+    transform: scale(1.5, 1.5);
+    animation-timing-function: ease-out;
+  }
+  55% {
+    transform: scale(1.37, 1.37);
+    animation-timing-function: ease-in;
+  }
+  73% {
+    transform: scale(1, 1);
+    animation-timing-function: ease-out;
+  }
+  82% {
+    transform: scale(1.45, 1.45);
+    animation-timing-function: ease-in;
+  }
+  91% {
+    transform: scale(1.5, 1.5);
+    animation-timing-function: ease-out;
+  }
+  96% {
+    transform: scale(1.4, 1.4);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: scale(1, 1);
+    animation-timing-function: ease-out;
+  }
+}
