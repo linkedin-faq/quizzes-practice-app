@@ -6,7 +6,7 @@ import { SET_TOPICS } from './types';
 export const AppContext = createContext();
 
 const initialState = {
-  topics: quizData
+  topics: []
 };
 
 const reducer = (state, action) => {

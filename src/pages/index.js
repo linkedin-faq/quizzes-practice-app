@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import Head from "next/head";
 import Quiz from "components/Quiz";
 import { Container, Typography } from "@material-ui/core";
@@ -39,7 +39,15 @@ export default function Home() {
       type: SET_TOPICS,
       payload: newTopics
     })
-   }
+  }
+
+  useEffect(() => {
+    appDispatch({
+      type: SET_TOPICS,
+      payload: quizData
+    })
+    
+  }, [])
   return (
     <Container>
       <Head>
