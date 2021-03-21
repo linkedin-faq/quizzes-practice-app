@@ -36,6 +36,11 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "40px",
     display: "flex",
   },
+  label: {
+    wordWrap: 'break-word',
+    whiteSpace: 'pre-line'
+  }
+
 }));
 const Questions = ({ quizData }) => {
   const classes = useStyles();
@@ -142,14 +147,15 @@ const Questions = ({ quizData }) => {
                   style={{
                     ...(isSubmit
                       ? {
-                          color:
-                            index === current.anwserIndex ? "green" : "red",
-                        }
+                        color:
+                          index === current.anwserIndex ? "green" : "red",
+                      }
                       : {}),
                   }}
                   value={index}
                   control={<Radio />}
                   label={opt}
+                  classes={{label: classes.label}}
                 />
               ))}
             </RadioGroup>
