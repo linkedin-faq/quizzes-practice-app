@@ -20,8 +20,7 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: 16,
     paddingBottom: 16,
     marginTop: theme.spacing.unit * 3,
-    width: "60%",
-
+    width: "95%",
     margin: "0 auto",
   }),
   button: {
