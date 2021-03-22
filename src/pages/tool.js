@@ -140,7 +140,7 @@ const MarkdownToJSON = () => {
   return (
     <Container>
       <Head>
-        <title>Khelo Quiz</title>
+        <title>Link The In</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Box mt={2}>

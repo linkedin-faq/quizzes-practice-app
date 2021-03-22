@@ -50,13 +50,13 @@ export default function Home() {
   return (
     <Container>
       <Head>
-        <title>Khelo Quiz</title>
+        <title>Link The In</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
         <Typography variant="h1" className={classes.title}>
-          Welcome to <b>Khelo Quiz!</b>
+          Welcome to <b>Link The In!</b>
         </Typography>
         <div style={{textAlign: 'center'}}>
           <SearchBar onChangeEvent={onSearchbarInputChange} value={searchValue}/>
