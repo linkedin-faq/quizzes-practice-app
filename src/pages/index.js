@@ -13,7 +13,6 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "4rem",
     textAlign: "center",
     marginBottom: theme.spacing(),
-    textAlign: 'center'
   },
 
   footer: {
@@ -34,7 +33,7 @@ export default function Home() {
   const onSearchbarInputChange = (e) => {
     const val =e.target.value
     setSearchValue(val);
-    const newTopics = quizData.filter(x => x.quiz_name.includes(val));
+    const newTopics = quizData.filter(x => x.quiz_name.toLowerCase().includes(val.toLowerCase()));
     appDispatch({
       type: SET_TOPICS,
       payload: newTopics
