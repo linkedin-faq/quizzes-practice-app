@@ -11,6 +11,6 @@ Use `npm run quick-start` to install dependencies, create a build and then start
 After that, visit http://localhost:3000/ and start practising!
 
 ## Demo
-![homepage]      (readme_images/home.PNG?raw=true)
+![homepage](readme_images/home.PNG?raw=true)
 ![filter quizzes](readme_images/filter.PNG?raw=true)
-![quiz]          (readme_images/quiz.PNG?raw=true)
+![quiz](readme_images/quiz.PNG?raw=true)
