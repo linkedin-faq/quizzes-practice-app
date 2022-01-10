@@ -55,13 +55,29 @@ const QuizList = () => {
             return (
               <Grid item xs={12} sm={6} md={4} lg={3}  key={x.id}>
                 <Paper className={classes.paper} onClick={() => onQuizClick(x, img)}>
-                  <img
-                    className="topic-logo"
-                    src={img}
-                    alt={x.quiz_name}
-                    width="120"
-                    height="100"
-                  />
+                  <div style={{
+                    // constant height of images without altering with/height ratio. Center images horizontally
+                    height: 100,
+                    textAlign: "center"
+                  }}>
+                    <img
+                      className="topic-logo"
+                      src={img}
+                      alt={x.quiz_name}
+                      // width="120"
+                      // height="100"
+                      style={{
+                        // fit in frame
+                        maxHeight: 100, 
+                        maxWidth: 120,
+
+                        // center vertically
+                        position: "relative", 
+                        top: "50%", 
+                        transform: "translateY(-50%)"
+                      }}
+                    />
+                  </div>
                   <p className={classes.text}>{x.quiz_name}</p>
                 </Paper>
               </Grid>
