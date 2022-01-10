@@ -59,7 +59,7 @@ export default function Home() {
           Welcome to <b>Link The In!</b>
         </Typography>
         <div style={{textAlign: 'center'}}>
-          <SearchBar onChangeEvent={onSearchbarInputChange} value={searchValue}/>
+          <SearchBar onChangeEvent={onSearchbarInputChange} value={searchValue} placeholder={"filter quizzes"} />
         </div>
 
         <Quiz />
