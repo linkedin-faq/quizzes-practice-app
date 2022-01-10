@@ -1,5 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import Prism from "prismjs";
+import Link from 'next/link';
+
 import {
   Box,
   FormControlLabel,
@@ -102,7 +104,11 @@ const Questions = ({ quizData }) => {
               Retake
             </Button>
 
-            <Button color="secondary">Take another Test</Button>
+            <Link href="/">
+              <Button color="secondary">
+                Take another Test
+              </Button>
+            </Link>
           </div>
         ) : (
           <Paper className={classes.root} elevation={4}>
