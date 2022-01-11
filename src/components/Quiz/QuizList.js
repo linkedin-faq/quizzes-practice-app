@@ -64,8 +64,6 @@ const QuizList = () => {
                       className="topic-logo"
                       src={img}
                       alt={x.quiz_name}
-                      // width="120"
-                      // height="100"
                       style={{
                         // fit in frame
                         maxHeight: 100, 
