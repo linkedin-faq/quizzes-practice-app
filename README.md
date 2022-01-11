@@ -2,7 +2,7 @@
 This web app lets you practice in a similar environment to an actual Linkedin quiz.
 
 ## Quick Start
-Run `git clone https://github.com/linkedin-faq/quizzes-practice-app.git` to get a copy of this repo.
+Run `git clone https://github.com/Sharpness-B/quizzes-practice-app.git` to get a copy of this repo.
 
 Then `cd quizzes-practice-app`
 
