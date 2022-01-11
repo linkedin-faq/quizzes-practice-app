@@ -68,7 +68,6 @@ const QuizList = () => {
                         maxHeight: 100, 
                         maxWidth: 120,
 
-                        // center vertically
                         position: "relative", 
                         top: "50%", 
                         transform: "translateY(-50%)"
