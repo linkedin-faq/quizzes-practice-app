@@ -65,7 +65,6 @@ const QuizList = () => {
                       src={img}
                       alt={x.quiz_name}
                       style={{
-                        // fit in frame
                         maxHeight: 100, 
                         maxWidth: 120,
 
