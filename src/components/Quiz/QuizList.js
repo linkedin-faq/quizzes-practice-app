@@ -56,7 +56,6 @@ const QuizList = () => {
               <Grid item xs={12} sm={6} md={4} lg={3}  key={x.id}>
                 <Paper className={classes.paper} onClick={() => onQuizClick(x, img)}>
                   <div style={{
-                    // constant height of images without altering with/height ratio. Center images horizontally
                     height: 100,
                     textAlign: "center"
                   }}>
